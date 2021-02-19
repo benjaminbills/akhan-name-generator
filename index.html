@@ -14,7 +14,52 @@
     <title>Akan Name Generator</title>
   </head>
   <body>
-    <h1>Akan Name Generator</h1>
+    <div class="container details d-flex justify-content-center">
+      <div class="cover"></div>
+      <div class="card mt-5">
+        <div class="card-header text-center fs-3">
+          Get your Akan name and become a Ghanian in a Sec 😂 😂
+        </div>
+        <form id="userForm">
+          <div class="mb-3 mt-5">
+            <label for="birthday" class="form-label">Birthday</label>
+            <input type="date" class="form-control" id="birthday" />
+          </div>
+
+          <div class="mb-3">
+            <label for="gender" class="form-label">Gender</label>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="gender"
+                id="male"
+                value="male"
+              />
+              <label class="form-check-label"> Male </label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="gender"
+                id="female"
+                value="female"
+              />
+              <label class="form-check-label" for="female"> Female </label>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-lg rounded-pill">
+            Submit
+          </button>
+        </form>
+        <div class="result">
+          <h2>Result</h2>
+          <p id="result" class="mt-5"></p>
+        </div>
+      </div>
+    </div>
 
     <script src="js/app.js"></script>
   </body>
