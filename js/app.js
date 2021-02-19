@@ -9,5 +9,7 @@ const gendersValue = () => {
   }
   return false;
 };
-console.log(userForm);
-console.log(gendersValue);
+userForm.addEventListener("submit", function (e) {
+  e.preventDefault();
+  console.log("submitted");
+});
