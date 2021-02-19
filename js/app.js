@@ -11,5 +11,14 @@ const gendersValue = () => {
 };
 userForm.addEventListener("submit", function (e) {
   e.preventDefault();
-  console.log("submitted");
+  const userBirthday = userForm.elements.birthday.value;
+  console.log(userBirthday);
+  let birthdayArray = userBirthday.split("-");
+  console.log(birthdayArray);
+  let yy = birthdayArray[0];
+  let mm = birthdayArray[1] - 1;
+  let dd = birthdayArray[2];
+  let dobj = new Date(yy, mm, dd);
+  let dow = dobj.getDay();
+  console.log(dow);
 });
