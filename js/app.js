@@ -45,20 +45,27 @@ userForm.addEventListener("submit", function (e) {
   let yy = birthdayArray[0];
   let mm = birthdayArray[1] - 1;
   let dd = birthdayArray[2];
-  let dobj = new Date(yy, mm, dd);
-  let dow = dobj.getDay();
-  let dayOfweek = days[dow];
+  let date = new Date(yy, mm, dd);
+  let dayNum = date.getDay();
+  let dayOfweek = days[dayNum];
 
   const output = `You were born on ${dayOfweek} and your Akan name is :`;
 
+  if (userBirthday === "") {
+    alert("Put in correct birthday");
+  }
+  if (gendersValue() === false) {
+    alert("Please select a gender");
+  }
+
   if (gendersValue() === "male") {
-    newName = maleNames[dow];
+    newName = maleNames[dayNum];
     resultContainer.innerText = `${output} ${newName}`;
     userForm.reset();
   }
 
   if (gendersValue() === "female") {
-    newName = femaleNames[dow];
+    newName = femaleNames[dayNum];
     resultContainer.innerText = `${output} ${newName}`;
     userForm.reset();
   }
