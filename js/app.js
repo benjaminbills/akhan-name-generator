@@ -47,6 +47,19 @@ userForm.addEventListener("submit", function (e) {
   let dd = birthdayArray[2];
   let dobj = new Date(yy, mm, dd);
   let dow = dobj.getDay();
-  console.log(dow);
   let dayOfweek = days[dow];
+
+  const output = `You were born on ${dayOfweek} and your Akan name is :`;
+
+  if (gendersValue() === "male") {
+    newName = maleNames[dow];
+    resultContainer.innerText = `${output} ${newName}`;
+    userForm.reset();
+  }
+
+  if (gendersValue() === "female") {
+    newName = femaleNames[dow];
+    resultContainer.innerText = `${output} ${newName}`;
+    userForm.reset();
+  }
 });
