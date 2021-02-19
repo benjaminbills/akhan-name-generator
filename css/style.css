@@ -3,6 +3,7 @@ body {
   color: #393f63;
   background: #c8c8c8;
   font: 600 16px/18px "Open Sans", sans-serif;
+  font-size: 1.2rem;
 }
 
 .details {
@@ -22,6 +23,9 @@ body {
   height: 100%;
   position: absolute;
   background: rgba(180, 182, 187, 0.6);
+}
+a {
+  text-decoration: none;
 }
 .card {
   background: none;
