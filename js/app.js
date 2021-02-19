@@ -11,6 +11,7 @@ const gendersValue = () => {
 };
 userForm.addEventListener("submit", function (e) {
   e.preventDefault();
+  //Declare arrays of data to be used
   const maleNames = [
     "Kwasi",
     "Kwadwo",
@@ -38,10 +39,9 @@ userForm.addEventListener("submit", function (e) {
     "Friday",
     "Saturday",
   ];
+  //getting data from user
   const userBirthday = userForm.elements.birthday.value;
-  console.log(userBirthday);
   let birthdayArray = userBirthday.split("-");
-  console.log(birthdayArray);
   let yy = birthdayArray[0];
   let mm = birthdayArray[1] - 1;
   let dd = birthdayArray[2];
@@ -49,15 +49,15 @@ userForm.addEventListener("submit", function (e) {
   let dayNum = date.getDay();
   let dayOfweek = days[dayNum];
 
-  const output = `You were born on ${dayOfweek} and your Akan name is :`;
-
+  //validation
   if (userBirthday === "") {
     alert("Put in correct birthday");
   }
   if (gendersValue() === false) {
     alert("Please select a gender");
   }
-
+  //Check gender type and assign values to output
+  const output = `You were born on ${dayOfweek} and your Akan name is :`;
   if (gendersValue() === "male") {
     newName = maleNames[dayNum];
     resultContainer.innerText = `${output} ${newName}`;
