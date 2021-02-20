@@ -8,6 +8,7 @@ This is a name generator that obtains user's birthday and gender to generates a 
 | ------------------------------------- | :-----------------: | --------------------------: |
 | a day not in calender                 |     29/02/1997      |      put in correct details |
 | a day in calender                     |     22/02/1997      | select gender to get result |
+| gender selected                       |        male         |          please select date |
 | a day in calender and gender selected | 22/02/1997 and male |        return new akan name |
 
 ## Author Information
