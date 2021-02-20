@@ -10,10 +10,17 @@
       integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="css/style.css" />
     <title>Akan Name Generator</title>
   </head>
   <body>
+    <!-- showcase -->
     <div class="container details d-flex justify-content-center">
       <div class="cover"></div>
       <div class="card mt-5">
@@ -35,6 +42,7 @@
         <div class="card-text mt-5">
           Fill in your details and get your Akan name.
         </div>
+        <!-- form-section -->
         <form id="userForm">
           <div class="mb-3 mt-2">
             <label for="birthday" class="form-label">Birthday</label>
@@ -69,13 +77,58 @@
             Submit
           </button>
         </form>
+        <!-- result -->
         <div class="result">
           <h2>Result</h2>
           <p id="result" class="mt-5"></p>
         </div>
       </div>
     </div>
+    <!-- footer -->
+    <footer>
+      <hr />
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <p class="copyright-text">
+              Copyright &copy; 2021 All Rights Reserved by
+              <a href="https://github.com/benjaminbills" target="_blank"
+                >Benjamin Obafemi</a
+              >.
+            </p>
+          </div>
 
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <ul class="social-icons">
+              <li>
+                <a
+                  href="https://twitter.com/Benjaminobafem1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/benjaminbills"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fab fa-github"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/benjamin-obafemi-a896b314b/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
     <script src="js/app.js"></script>
   </body>
 </html>
