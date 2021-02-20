@@ -38,6 +38,10 @@ a {
   font-weight: 900;
 }
 
+#result {
+  line-height: 25px;
+  margin-bottom: 10px;
+}
 footer {
   left: 0;
   bottom: 0;
