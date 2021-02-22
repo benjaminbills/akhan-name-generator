@@ -48,23 +48,39 @@ userForm.addEventListener("submit", function (e) {
   let date = new Date(yy, mm, dd);
   let dayNum = date.getDay();
   let dayOfweek = days[dayNum];
-
+  console.log(typeof userBirthday);
   //validation
-  if (userBirthday === "") {
-    alert("Put in correct birthday");
+  if (userBirthday === "" && gendersValue() === false) {
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "Put in correct birthday date and select gender",
+    });
   }
-  if (gendersValue() === false) {
-    alert("Please select a gender");
+  if (userBirthday === "" && gendersValue()) {
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "Put in correct birthday date",
+    });
+  }
+  if (gendersValue() === false && userBirthday) {
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "Please select a gender",
+    });
+    //alert("Please select a gender");
   }
   //Check gender type and assign values to output
   const output = `You were born on ${dayOfweek} and your Akan name is :`;
-  if (gendersValue() === "male") {
+  if (gendersValue() === "male" && !userBirthday == "") {
     newName = maleNames[dayNum];
     resultContainer.innerText = `${output} ${newName}`;
     userForm.reset();
   }
 
-  if (gendersValue() === "female") {
+  if (gendersValue() === "female" && !userBirthday == "") {
     newName = femaleNames[dayNum];
     resultContainer.innerText = `${output} ${newName}`;
     userForm.reset();
