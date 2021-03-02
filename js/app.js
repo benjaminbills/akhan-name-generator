@@ -48,7 +48,6 @@ userForm.addEventListener("submit", function (e) {
   let date = new Date(yy, mm, dd);
   let dayNum = date.getDay();
   let dayOfweek = days[dayNum];
-  console.log(typeof userBirthday);
   //validation
   if (userBirthday === "" && gendersValue() === false) {
     Swal.fire({
@@ -70,7 +69,6 @@ userForm.addEventListener("submit", function (e) {
       title: "Oops...",
       text: "Please select a gender",
     });
-    //alert("Please select a gender");
   }
   //Check gender type and assign values to output
   const output = `You were born on ${dayOfweek} and your Akan name is :`;
